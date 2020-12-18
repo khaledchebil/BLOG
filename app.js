@@ -19,8 +19,7 @@ myDB();
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
-// app.use('/articles', router)
-app.use('/articles', require('./routes/articles.js'));
+
 
 app.use('/admin', require('./routes/admin.router.js'));
 
@@ -58,7 +57,8 @@ app.use(function(req, res, next) {
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
 
-
+// app.use('/articles', router)
+app.use('/articles', require('./routes/articles.js'));
 //admin
 
 // app.use(bodyParser.json())
